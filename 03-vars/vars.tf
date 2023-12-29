@@ -78,12 +78,12 @@ output "course" {
 
 ### List
 output "cyllabus" {
-  value = var.cyllabus
+  value = var.cyllabus[2]
 }
 
 ### Map
 output "course_details" {
-  value = var.course_details
+  value = var.course_details["DevOps"]
 }
 
 # NOTE
