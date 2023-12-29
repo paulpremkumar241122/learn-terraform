@@ -22,3 +22,70 @@ output "sample-one" {
 output "sample-ext" {
   value = "value of sample - ${var.sample}"
 }
+
+# Variable Data Types
+# 1. string
+# 2. number
+# 3. boolean
+
+# as we have learned in Ansible the variable types are
+# in Ansible --- 1. Plain key, value, 2. list, 3. Map/Dict
+
+# now in terraform
+# 1. Plain
+# 2. List
+# 3. Map
+
+### Plain
+variable "course" {
+  default = "DevOps Training"
+}
+
+
+### List
+variable "cyllabus" {
+  default = [
+    "DevOps",
+    "Linux",
+    "AWS",
+    "Ansible",
+    "Terraform"
+  ]
+}
+
+### Map
+variable "course_details" {
+  default = {
+    DevOps = {
+      course = "DevOps"
+      time = "10am"
+      duration = 90
+    }
+    AWS = {
+      course = "AWS"
+      time = "11am"
+      duration = 30
+    }
+  }
+}
+
+# now calling the variables with output block
+
+### Plain
+output "course" {
+  value = "Plain Variable ${var.course}"
+}
+
+### List
+output "cyllabus" {
+  value = "List Variable ${var.cyllabus}"
+}
+
+### Map
+output "course_details" {
+  value = "Map Variable ${var.course_details}"
+}
+
+# NOTE
+# we can also simply call the variable like
+# value = var.course_details
