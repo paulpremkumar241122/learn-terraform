@@ -91,6 +91,6 @@ output "course_details" {
 
 variable "env" {}
 
-output = "env" {
+output "env" {
   value = var.env
 }
