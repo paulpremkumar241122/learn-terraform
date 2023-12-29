@@ -88,3 +88,9 @@ output "course_details" {
 
 # NOTE
 # we can also simply call the variable like
+
+variable "env" {}
+
+output = "env" {
+  value = var.env
+}
