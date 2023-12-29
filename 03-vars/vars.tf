@@ -73,19 +73,18 @@ variable "course_details" {
 
 ### Plain
 output "course" {
-  value = "Plain Variable - ${var.course}"
+  value = var.course
 }
 
 ### List
 output "cyllabus" {
-  value = " List Variable - ${var.cyllabus} "
+  value = var.cyllabus
 }
 
 ### Map
 output "course_details" {
-  value = " Map Variable - ${var.course_details} "
+  value = var.course_details
 }
 
 # NOTE
 # we can also simply call the variable like
-# value = var.course_details
