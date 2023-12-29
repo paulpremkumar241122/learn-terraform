@@ -78,12 +78,12 @@ output "course" {
 
 ### List
 output "cyllabus" {
-  value = "List Variable - ${var.cyllabus}"
+  value = " List Variable - ${var.cyllabus} "
 }
 
 ### Map
 output "course_details" {
-  value = "Map Variable - ${var.course_details}"
+  value = " Map Variable - ${var.course_details} "
 }
 
 # NOTE
