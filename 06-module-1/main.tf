@@ -1,9 +1,9 @@
-module "ec2" {
+module "sample" {
   source = "./ec2"
   name = "sample"
 }
 
-module "ec2" {
+module "sample1" {
   source = "./ec2"
   name = "sample1"
 }
