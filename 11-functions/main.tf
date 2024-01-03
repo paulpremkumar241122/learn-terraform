@@ -35,3 +35,8 @@ output "devops_topics" {
 output "aws_topics" {
   value = lookup(lookup(var.classes, "aws", null), "topics", "m levu laavada")
 }
+
+
+output "fruits_0" {
+  value = var.fruits[0]
+}
