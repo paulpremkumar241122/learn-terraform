@@ -4,7 +4,7 @@ resource "aws_instance" "web" {
   vpc_security_group_ids = ["sg-035198221e16083de"]
 
   tags = {
-    Name = "HelloWorld"
+    Name = "Frontend"
   }
 
   provisioner "remote-exec" {
