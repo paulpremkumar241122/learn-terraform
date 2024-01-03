@@ -4,7 +4,7 @@ resource "aws_instance" "web" {
   instance_type = "t3.nano"
 
   tags = {
-    Name = "From_Terraform"
+    Name = element(var.instances, count.index)
   }
 }
 
