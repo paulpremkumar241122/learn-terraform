@@ -4,8 +4,7 @@ resource "aws_instance" "web" {
   instance_type = "t3.nano"
 
   tags = {
-#    Name = element(var.instances, count.index)
-    Name = element(var.instances)
+    Name = element(var.instances, count.index)
   }
 }
 
