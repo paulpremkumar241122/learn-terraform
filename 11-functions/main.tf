@@ -29,5 +29,5 @@ variable "classes" {
 }
 
 output "devops_topics" {
-  value = upper(var.classes)["devops"]["topics"]
+  value = var.classes["devops"]["topics"]
 }
