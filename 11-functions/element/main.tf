@@ -5,5 +5,5 @@ variable "fruits" {
 
 
 output "fruits_4" {
-  value = element(var.fruits, count.index)
+  value = element(var.fruits, 4)
 }
