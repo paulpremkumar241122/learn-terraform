@@ -1,5 +1,5 @@
 resource "aws_instance" "web" {
-  count = 3
+  count         = length(var.instances)
   ami           = data.aws_ami.example.id
   instance_type = "t3.nano"
 
@@ -14,6 +14,6 @@ data "aws_ami" "example" {
   name_regex  = "Centos-8-DevOps-Practice"
 }
 
-#variable "instances" {
- # default = ["frontend", "catalogue", "cart"]
-#}
+variable "instances" {
+  default = ["frontend", "catalogue", "cart"]
+}
